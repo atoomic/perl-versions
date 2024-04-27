@@ -1,6 +1,6 @@
 name: Check workflow
 
-on: [push, pull_request]
+on: "*"
 
 jobs:
 
@@ -45,4 +45,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-        echo "${{ fromJson (needs.perl-versions.outputs.perl-versions) }}"
+          echo "${{ fromJson (needs.perl-versions.outputs.perl-versions) }}"
